@@ -1,0 +1,21 @@
+#!/bin/bash
+
+while true; do
+    if [[ $# -eq 0 ]]; then
+        break
+    fi
+    case $1 in
+        -i)
+            interval=$2
+            shift 2
+            ;;
+        -n)
+            number=$2
+            shift 2
+            ;;
+        *)
+            command=$*
+            shift $#
+            ;;
+    esac
+done
