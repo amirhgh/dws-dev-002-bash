@@ -19,4 +19,4 @@ try -i 5 -n 12 which bash
 ```
 
 
-[@dwsclass](https://github.com/dwsclass/) dws-dev-001-bash
+[@dwsclass](https://github.com/dwsclass/) dws-dev-002-bash
