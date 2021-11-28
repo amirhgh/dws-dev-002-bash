@@ -20,6 +20,24 @@ while true; do
     esac
 done
 
+if [[ -z $number && -n $TRY_NUMBER ]]; then
+    number=$TRY_NUMBER
+elif [[ -z $number && -z $TRY_NUMBER ]]; then
+    number=12
+fi
+
+if [[ -z $interval && -n $TRY_INTERVAL ]]; then
+    interval=$TRY_INTERVAL
+elif [[ -z $interval && -z $TRY_INTERVAL ]]; then
+    interval=5
+fi
+
+if [[ -z $command && -n $TRY_COMMAND ]]; then
+    command=$TRY_COMMAND
+elif [[ -z $command && -z $TRY_COMMAND ]]; then
+    command=NULL
+fi
+
 for (( i=1; i<=$number; i++ )); do
     
     $command > /dev/null
